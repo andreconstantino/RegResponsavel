@@ -16,7 +16,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnCadastrarNovo">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cadastrar novo..."/>
+                <Property name="text" type="java.lang.String" value="Cadastrar Novo Aluno"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnCadastrarNovoActionPerformed"/>
@@ -24,7 +24,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnVisualizarAlunos">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Visualizar alunos..."/>
+                <Property name="text" type="java.lang.String" value="Visualizar Alunos"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnVisualizarAlunosActionPerformed"/>
@@ -32,7 +32,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnAlterarAlunos">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Alterar cadastro..."/>
+                <Property name="text" type="java.lang.String" value="Alterar Cadastro"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnAlterarAlunosActionPerformed"/>
@@ -47,12 +47,12 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnRelatorioAlunos">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio de alunos registrados"/>
+                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio de Alunos Registrados"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnRelatorioResponsaveisAluno">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio de respons&#xe1;veis e alunos"/>
+                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio de Respons&#xe1;veis e Alunos"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -64,7 +64,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnCadastrarUsuario">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cadastrar novo..."/>
+                <Property name="text" type="java.lang.String" value="Cadastrar Novo Usu&#xe1;rio"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnCadastrarUsuarioActionPerformed"/>
@@ -72,7 +72,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnAlterarSenha">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Alterar senha"/>
+                <Property name="text" type="java.lang.String" value="Alterar Senha"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnAlterarSenhaActionPerformed"/>
@@ -82,15 +82,12 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnSuperiorSair">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Sair"/>
+            <Property name="text" type="java.lang.String" value="Outros"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnSuperiorSairActionPerformed"/>
-          </Events>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnSair">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Sair"/>
+                <Property name="text" type="java.lang.String" value="Encerrar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnSairActionPerformed"/>
@@ -103,12 +100,13 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Sistema de Cadastro de Respons&#xe1;veis"/>
+    <Property name="title" type="java.lang.String" value="Sistema de Registro de Respons&#xe1;veis"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="bmBarraMenu"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -125,12 +123,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="565" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="740" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="353" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="494" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>

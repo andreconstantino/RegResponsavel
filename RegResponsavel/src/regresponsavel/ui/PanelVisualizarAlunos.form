@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -17,52 +17,41 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lbTitulo" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lbProcurar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tfProntuarioProcurar" min="-2" pref="61" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btProcurarAluno" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jsBarraRolagem" alignment="0" min="-2" pref="529" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btAlterarAluno" min="-2" pref="127" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btRemover" min="-2" pref="127" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btOrdenarProntuario" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="btOrdenarNome" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              <Component id="btOrdenarResponsavel" min="-2" max="-2" attributes="0"/>
-                          </Group>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="lbTitulo" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lbProcurar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="tfProntuarioProcurar" min="-2" pref="98" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btProcurarAluno" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btOrdenarNome" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btOrdenarProntuario" max="32767" attributes="0"/>
+                              <Component id="btOrdenarResponsavel" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                          <Component id="btAlterarAluno" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btRemover" min="-2" pref="93" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jsBarraRolagem" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="lbTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lbProcurar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btProcurarAluno" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -70,20 +59,17 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jsBarraRolagem" min="-2" pref="251" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btOrdenarProntuario" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="btOrdenarResponsavel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btOrdenarNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btOrdenarProntuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btRemover" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btAlterarAluno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btAlterarAluno" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btRemover" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Component id="btOrdenarNome" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Component id="btOrdenarResponsavel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -100,7 +86,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btOrdenarProntuario">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ordernar por prontu&#xe1;rio"/>
+        <Property name="text" type="java.lang.String" value="Ordernar por Prontu&#xe1;rio"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btOrdenarProntuarioActionPerformed"/>
@@ -108,7 +94,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btOrdenarResponsavel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ordernar por respons&#xe1;vel"/>
+        <Property name="text" type="java.lang.String" value="Ordernar por Respons&#xe1;vel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btOrdenarResponsavelActionPerformed"/>
@@ -116,7 +102,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btOrdenarNome">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ordernar por nome"/>
+        <Property name="text" type="java.lang.String" value="Ordernar por Nome"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btOrdenarNomeActionPerformed"/>
@@ -140,7 +126,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbProcurar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Prontu&#xe1;rio do aluno a procurar:"/>
+        <Property name="text" type="java.lang.String" value="Prontu&#xe1;rio do Aluno a Procurar:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btProcurarAluno">
@@ -152,6 +138,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tfProntuarioProcurar">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jsBarraRolagem">
       <AuxValues>
