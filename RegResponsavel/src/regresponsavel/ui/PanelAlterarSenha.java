@@ -1,9 +1,19 @@
 package regresponsavel.ui;
 
+import javax.swing.JOptionPane;
+import regresponsavel.controller.UsuarioController;
+import regresponsavel.model.UsuarioModel;
+
 public class PanelAlterarSenha extends javax.swing.JPanel {
 
-    public PanelAlterarSenha() {
+    private final UsuarioController uc = new UsuarioController();
+    private final UsuarioModel usuario;
+    
+    public PanelAlterarSenha(UsuarioModel u) {
         initComponents();
+        this.usuario = u;
+        tfNome.setText(usuario.getNome());
+        tfProntuario.setText(usuario.getProntuario());
     }
 
     @SuppressWarnings("unchecked")
@@ -33,6 +43,8 @@ public class PanelAlterarSenha extends javax.swing.JPanel {
 
         tfNome.setEnabled(false);
 
+        tfSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         lbSenha.setText("Senha Atual:");
 
         btAlterar.setText("Alterar");
@@ -56,11 +68,16 @@ public class PanelAlterarSenha extends javax.swing.JPanel {
             }
         });
 
+        tfSenhaRepetir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         lbSenhaRepetir.setText("Repetir Nova Senha:");
 
         lbProntuario.setText("Prontuário:");
 
+        tfProntuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfProntuario.setEnabled(false);
+
+        tfNovaSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lbNovaSenha.setText("Nova Senha:");
 
@@ -137,8 +154,35 @@ public class PanelAlterarSenha extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void limparCampos() {
+        tfSenha.setText("");
+        tfNovaSenha.setText("");
+        tfSenhaRepetir.setText("");
+        tfSenha.grabFocus();
+    }
+    
     private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
+        try {                    
+            if (uc.autenticar(tfProntuario.getText(), tfSenha.getText())) {
+                String senha, repetir;
 
+                senha = tfNovaSenha.getText();
+                repetir = tfSenhaRepetir.getText();
+
+                if (senha.equals(repetir)) {
+                    usuario.setSenha(senha);
+                    uc.alterar(usuario);
+                    limparCampos();
+                    JOptionPane.showMessageDialog(this, "Senha atualizada com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(this, "As senhas informadas não coincidem!", "Mensagem", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                    JOptionPane.showMessageDialog(this, "A senha atual está inválida!", "Mensagem", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Algum campo está vazio ou em formato inválido.", "Mensagem", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btAlterarActionPerformed
 
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed

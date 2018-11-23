@@ -126,6 +126,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="tfSenha">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSenha">
       <Properties>
@@ -157,6 +160,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="tfSenhaRepetir">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSenhaRepetir">
       <Properties>
@@ -170,10 +176,14 @@
     </Component>
     <Component class="javax.swing.JTextField" name="tfProntuario">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="tfNovaSenha">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbNovaSenha">
       <Properties>

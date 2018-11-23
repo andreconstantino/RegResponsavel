@@ -5,14 +5,19 @@ import regresponsavel.model.UsuarioModel;
 
 public class FramePrincipal extends javax.swing.JFrame {
 
+    private final UsuarioModel usuario;
+    
     public FramePrincipal(UsuarioModel u) {
         initComponents();
+        this.usuario = u;
     }
     
     private void atualizarTela(JPanel p) {
         this.setContentPane(p);
         this.setSize(this.getPreferredSize());
         this.pack();
+        this.repaint();
+        this.validate();
         this.setLocationRelativeTo(null);
     }
 
@@ -21,6 +26,8 @@ public class FramePrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        panelCentral = new javax.swing.JPanel();
+        lbTitulo = new javax.swing.JLabel();
         bmBarraMenu = new javax.swing.JMenuBar();
         mnCadastro = new javax.swing.JMenu();
         mnCadastrarNovo = new javax.swing.JMenuItem();
@@ -38,8 +45,24 @@ public class FramePrincipal extends javax.swing.JFrame {
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema de Registro de Responsáveis");
+        setTitle("Tela Principal");
         setResizable(false);
+
+        lbTitulo.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
+        lbTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTitulo.setText("RegResponsável ");
+        lbTitulo.setEnabled(false);
+
+        javax.swing.GroupLayout panelCentralLayout = new javax.swing.GroupLayout(panelCentral);
+        panelCentral.setLayout(panelCentralLayout);
+        panelCentralLayout.setHorizontalGroup(
+            panelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        panelCentralLayout.setVerticalGroup(
+            panelCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         mnCadastro.setText("Aluno");
 
@@ -71,7 +94,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         mnRelatorios.setText("Relatórios");
 
-        mnRelatorioAlunos.setText("Relatório de Alunos Registrados");
+        mnRelatorioAlunos.setText("Relatório de Alunos Cadastrados");
         mnRelatorios.add(mnRelatorioAlunos);
 
         mnRelatorioResponsaveisAluno.setText("Relatório de Responsáveis e Alunos");
@@ -117,11 +140,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addComponent(panelCentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 494, Short.MAX_VALUE)
+            .addComponent(panelCentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -143,7 +166,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_mnSairActionPerformed
 
     private void mnAlterarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAlterarSenhaActionPerformed
-        JPanel panel = new PanelAlterarSenha();
+        JPanel panel = new PanelAlterarSenha(usuario);
         atualizarTela(panel);
     }//GEN-LAST:event_mnAlterarSenhaActionPerformed
 
@@ -160,6 +183,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar bmBarraMenu;
     private javax.swing.JMenuItem jMenuItem1;
+    public static javax.swing.JLabel lbTitulo;
     private javax.swing.JMenuItem mnAlterarAlunos;
     private javax.swing.JMenuItem mnAlterarSenha;
     private javax.swing.JMenuItem mnCadastrarNovo;
@@ -172,5 +196,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mnSuperiorSair;
     private javax.swing.JMenu mnUsuario;
     private javax.swing.JMenuItem mnVisualizarAlunos;
+    public static javax.swing.JPanel panelCentral;
     // End of variables declaration//GEN-END:variables
 }

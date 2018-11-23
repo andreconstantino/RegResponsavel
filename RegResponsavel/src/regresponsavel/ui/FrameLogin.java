@@ -24,7 +24,7 @@ public class FrameLogin extends javax.swing.JFrame {
         btFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Seja Bem Vindo(a)!");
+        setTitle("Tela de Login");
         setAlwaysOnTop(true);
         setLocationByPlatform(true);
         setResizable(false);
@@ -106,11 +106,11 @@ public class FrameLogin extends javax.swing.JFrame {
 
     private void btLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogarActionPerformed
         
-        if(uc.autenticar(tfProntuario.getText(), tfSenha.getText())) {
+        if (uc.autenticar(tfProntuario.getText(), tfSenha.getText())) {
             JOptionPane.showMessageDialog(this, "Usuário autenticado com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
             JFrame aplicacao = new FramePrincipal(uc.obter(tfProntuario.getText()));
             aplicacao.setVisible(true);
-            this.setVisible(false);
+            this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Prontuário ou senha estão inválidos.", "Mensagem", JOptionPane.WARNING_MESSAGE);
         }
