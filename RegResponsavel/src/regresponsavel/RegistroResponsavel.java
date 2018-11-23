@@ -1,7 +1,6 @@
 package regresponsavel;
 
-import regresponsavel.ui.FramePrincipal;
-import regresponsavel.ui.FrameLogin;
+import regresponsavel.ui.*;
 
 public class RegistroResponsavel {
 
@@ -17,7 +16,7 @@ public class RegistroResponsavel {
             java.util.logging.Logger.getLogger(FrameLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }       
         java.awt.EventQueue.invokeLater(() -> {
-            new FramePrincipal().setVisible(true);
+            new FrameLogin().setVisible(true);
         });
     }    
 }

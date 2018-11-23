@@ -37,18 +37,21 @@ public class UsuarioDAO implements IUsuarioDAO {
         } finally {
             em.close();
         }
-    }
+    } 
 
     @Override
-    public List obterUsuarios() {
+    public boolean autenticarUsuario(String prontuario, String senha) {
         try {
-            em = ConnectionFactoryHibernate.obterConexao();                    
-            Query hql = em.createQuery("select object(u) from UsuarioModel as u");
-            return hql.getResultList();
-        } catch (Exception e)  {
-            throw new RuntimeException("Exceção de Banco de Dados: " + e);
+            em = ConnectionFactoryHibernate.obterConexao();
+            Query hql = em.createQuery("select object(u) from UsuarioModel as u where u.prontuario = :prontuario and u.senha = :senha")
+                    .setParameter("prontuario", prontuario)
+                    .setParameter("senha", senha);            
+            Object obj = hql.getSingleResult(); 
+            return obj != null;
+        } catch (Exception ex)  {
+            return false;
         } finally {
             em.close();
-        }
-    }    
+        }    
+    }
 }

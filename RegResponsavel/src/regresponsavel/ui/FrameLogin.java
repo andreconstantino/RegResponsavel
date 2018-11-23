@@ -1,9 +1,12 @@
 package regresponsavel.ui;
 
 import javax.swing.*;
+import regresponsavel.controller.UsuarioController;
 
 public class FrameLogin extends javax.swing.JFrame {
 
+    private final UsuarioController uc = new UsuarioController();
+    
     public FrameLogin() {
         initComponents();
     }
@@ -98,19 +101,18 @@ public class FrameLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_btFecharActionPerformed
 
     private void btLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogarActionPerformed
-
-        boolean loginSenhaCorreta = true;
         
-        if(loginSenhaCorreta) {
+        if(uc.autenticar(tfProntuario.getText(), tfSenha.getText())) {
+            JOptionPane.showMessageDialog(this, "Usuário autenticado com sucesso!");
             JFrame aplicacao = new FramePrincipal();
             aplicacao.setVisible(true);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Login ou senha inválidos.");
+            JOptionPane.showMessageDialog(this, "Prontuário ou senha estão inválidos, favor informar novamente.");
         }
     }//GEN-LAST:event_btLogarActionPerformed
 
