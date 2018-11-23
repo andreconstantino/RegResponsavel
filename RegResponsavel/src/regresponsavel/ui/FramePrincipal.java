@@ -1,10 +1,11 @@
 package regresponsavel.ui;
 
 import javax.swing.*;
+import regresponsavel.model.UsuarioModel;
 
 public class FramePrincipal extends javax.swing.JFrame {
 
-    public FramePrincipal() {
+    public FramePrincipal(UsuarioModel u) {
         initComponents();
     }
     

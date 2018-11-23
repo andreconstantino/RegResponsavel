@@ -16,9 +16,9 @@ public class PessoaModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigoPessoa;
-    private String nome;
-    private String dataNascimento;
+    private int codigoPessoa;    
+    private String nome;    
+    private String dataNascimento;    
     private String telefone;
     
     public PessoaModel() {

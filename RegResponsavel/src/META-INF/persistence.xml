@@ -6,6 +6,7 @@
     <class>regresponsavel.model.PessoaModel</class>
     <class>regresponsavel.model.ResponsavelModel</class>
     <class>regresponsavel.model.UsuarioModel</class>
+    <validation-mode>NONE</validation-mode>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/regresponsavel?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

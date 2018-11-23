@@ -10,8 +10,8 @@ import javax.persistence.Table;
 public class UsuarioModel implements Serializable {
     
     @Id
-    private String prontuario;
-    private String nome;
+    private String prontuario;    
+    private String nome;    
     private String senha;
 
     public UsuarioModel() {

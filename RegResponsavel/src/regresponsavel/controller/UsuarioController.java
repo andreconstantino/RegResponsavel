@@ -22,4 +22,8 @@ public class UsuarioController {
     public boolean autenticar(String prontuario, String senha) {
         return dao.autenticarUsuario(prontuario, senha);
     }    
+    
+    public UsuarioModel obter(String prontuario) {
+        return dao.obterUsuario(prontuario);
+    }
 }
